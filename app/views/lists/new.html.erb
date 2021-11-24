@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <%= form_with model:@list, local: true do |f| %>
+      
+      <div class="field">
+      <%= f.label :料理名 %><br />
+      <%= f.text_field :name %>
+      </div>
+      
+      <div class="field">
+      <%= f.label :説明 %><br />
+      <%= f.text_area :description %>
+      </div>
+      
+      <div class="actions">
+      <%= f.submit '作成' %>
+      </div>
+      
+    <% end %>
+  </div>
+  <%= link_to '<<献立リストへ戻る', lists_path %>
+</div>

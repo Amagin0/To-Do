@@ -1,0 +1,25 @@
+<div>
+  <h2><%= link_to '新しい献立', new_list_path %></h2>
+</div>
+
+<table class='table table-hover table-inverse'>
+  <thead>
+    <tr>
+      <th><h2>料理名</h2></th>
+      <th><h2>説明</h2></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @lists.each do |list| %>
+      <tr>
+        <td><%= link_to list.name, list_path(list) %></td>
+        <td><%= list.description %></td>
+        <td>　　　　　　　　　</td>
+        <td><%= link_to '編集', edit_list_path(list) %></td>
+        <td>  </td>
+        <td><%= link_to '削除', list_path(list), method: :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

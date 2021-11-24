@@ -1,0 +1,28 @@
+<h1>献立の詳細</h1>
+<hr>
+<h2><%= @list.name %></h2><br />
+<%= @list.description %><br/>
+<hr>
+
+
+<% @list.items.each do |item| %>
+<table class="table">
+    <tr>
+      <th><li><%= item.name %></li></th>
+      <th>
+      <%= link_to '<削除>', list_item_path(item.list_id, item.id), method: :delete %>
+      </th>
+      <% end %>
+    </tr>
+</table>
+
+<hr>
+
+<p><h1>食材リスト</h1></p>
+<%= form_with model:[@list, Item.new], local: true do |f| %>
+    <%= f.text_field :name %>
+    <%= f.submit '食材を追加する'%>
+<% end %>
+
+<hr>
+<%= link_to '<<献立リストへ戻る', lists_path %>
