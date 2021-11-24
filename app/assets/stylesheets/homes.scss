@@ -1,0 +1,108 @@
+// Place all the styles related to the homes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.main-visual {
+  background-image: image-url("kitchen-main.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 1000px;
+}
+
+.main-text {
+  color: #FAFAFA;
+  font-size: 10vmax;
+  padding-top: 50px;
+  letter-spacing : 2px;                /* 文字間 */
+  text-shadow    :
+       1px  1px 1px #003366,
+      -1px  1px 1px #003366,
+       1px -1px 1px #003366,
+      -1px -1px 1px #003366,
+       1px  0px 1px #003366,
+       0px  1px 1px #003366,
+      -1px  0px 1px #003366,
+       0px -1px 1px #003366;        /* 文字の影 */
+}
+
+.about-main {
+  background-color: #e6e6fa;
+  padding: 100px 0 160px;
+}
+
+.about-pop-image {
+  width: 100%;
+  height: 100%;
+}
+
+.about-text-title {
+  font-size: 3vmax;
+
+}
+
+.about-text {
+  font-size: 3vh;
+
+}
+
+.about-cook-image {
+  width: 120%;
+  height: 120%;
+}
+
+.contact-group {
+  padding: 50px;
+  display: flex;
+  background-color: #203744;
+}
+
+.contact-left {
+  width: 40%;
+  text-align: left;
+  background-color: #FAFAFA;
+  margin-right: 50px;
+  border-radius: 10px;
+}
+
+.contact-right {
+  width: 20%;
+  text-align: left;
+  background-color: #FAFAFA;
+  border-radius: 10px;
+}
+
+.contact-content {
+  width: 100%;
+  display: flex;
+  background-color: #FAFAFA;
+  border-radius: 10px;
+
+}
+
+.contact-title {
+  font-size: 40px;
+}
+
+.contact-chap {
+  font-size: 20px;
+}
+
+.contact-adress {
+  margin-top: 5px;
+}
+
+.mail-group, .tel-group {
+  width: 25%px;
+  margin-right: 10px;
+}
+
+.adress-group {
+  width: 50%;
+  margin-bottom: 5px;
+}
+
+.sns-mark {
+  margin-top: 5px;
+  margin-right: 20px;
+  font-size: 50px;
+}

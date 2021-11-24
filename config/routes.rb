@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :items,only: [:create, :destroy]
   end
   
-  root to: 'homes#top'
   
+  root to: 'homes#top'
+
 end

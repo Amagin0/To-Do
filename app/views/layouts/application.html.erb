@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ToDo</title>
+    <title>My Kitchen</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <%= render "layouts/header" %>
     <%= yield %>
+    <span id="back">
+      <a href="">
+        <%= image_tag asset_path('top-back.png'), data: {"turbolinks"=>false}, class: "arrow" %>
+      </a>
+    </span>
+    <%= render "layouts/footer" %>
   </body>
 </html>
