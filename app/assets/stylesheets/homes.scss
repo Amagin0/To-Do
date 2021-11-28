@@ -11,9 +11,11 @@
 
 .main-text {
   color: #FAFAFA;
-  font-size: 10vmax;
+  font-size: 11vmax;
   padding-top: 50px;
   letter-spacing : 2px;                /* 文字間 */
+  animation: SlideIn 3s ;    /* アニメーションの設定 */
+  animation-iteration-count: 1;
   text-shadow    :
        1px  1px 1px #003366,
       -1px  1px 1px #003366,
@@ -23,6 +25,17 @@
        0px  1px 1px #003366,
       -1px  0px 1px #003366,
        0px -1px 1px #003366;        /* 文字の影 */
+}
+
+@keyframes SlideIn {
+  0% {
+    opacity: 0;                     /*初期状態では透明 */
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .about-main {
